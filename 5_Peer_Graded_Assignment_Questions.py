@@ -71,7 +71,7 @@ def compute_data_choice_2(df):
 
 
 # Application layout
-app.layout = html.Div(children=[html.H1('US Domestic Airline Flights Performance', 
+app.layout = html.Div[html.H1('US Domestic Airline Flights Performance', 
                                 style={'textAlign': 'center', 'color': '#503D36',
                                 'font-size': 24}), 
                                 # TASK1: Add title to the dashboard
@@ -91,14 +91,15 @@ app.layout = html.Div(children=[html.H1('US Domestic Airline Flights Performance
                                         dcc.Dropdown(id='input-type',
                                         options=[
                                         {'label': 'Yearly Airline Performance Report', 'value': 'OPT1'},
-                                        {'label': 'Yearly Airline Delay Report', 'value': 'OPT2'},
-                
+                                        {'label': 'Yearly Airline Delay Report', 'value': 'OPT2'}
+                                        ],placeholder="Select Type",
+                                                    style={'width':'80%','padding':'3px','font-size':'20px','text-align-last':'center'}),
                                         # TASK2: Add a dropdown
                                         # Enter your code below. Make sure you have correct formatting.
                                         
                                     # Place them next to each other using the division style
                                     ], style={'display':'flex'}),
-                                    
+                                        
                                    # Add next division 
                                    html.Div([
                                        # Create an division for adding dropdown helper text for choosing year
@@ -132,7 +133,7 @@ app.layout = html.Div(children=[html.H1('US Domestic Airline Flights Performance
                                 # TASK3: Add a division with two empty divisions inside. See above disvision for example.
                                 # Enter your code below. Make sure you have correct formatting.
                                
-                                ])
+                                
 
 # Callback function definition
 # TASK4: Add 5 ouput components
